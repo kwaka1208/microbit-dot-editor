@@ -15,6 +15,7 @@ input.onGesture(Gesture.Shake, function () {
     Reset()
 })
 input.onButtonPressed(Button.AB, function () {
+    music.playTone(523, music.beat(BeatFraction.Eighth))
     canvas[position] = 1 - canvas[position]
 })
 input.onButtonPressed(Button.B, function () {
@@ -59,6 +60,7 @@ let position = 0
 let LoopBlock = 0
 let const_max_row = 0
 let const_max_col = 0
+led.setBrightness(128)
 const_max_col = 5
 const_max_row = 5
 Reset()
